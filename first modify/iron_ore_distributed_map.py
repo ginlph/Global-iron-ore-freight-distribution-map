@@ -14,13 +14,13 @@ one = {'Export': '澳大利亚', 'Ex_Pos': {'lon': 118.53, 'lat': -20.3},
 """
 
 
-with open('The Trade number.json', encoding='utf8') as f:
+with open('../dataProcess/The Trade number.json', encoding='utf8') as f:
     datas = json.load(f)
 
-fig = plt.figure(figsize=(15, 8), dpi=300)
+fig = plt.figure(figsize=(15, 8), dpi=150)
 ax = plt.axes(projection=ccrs.PlateCarree())
 ax.set_extent([-180, 180, -90, 90])
-# ax.coastlines()
+ax.coastlines()
 # ax.stock_img()
 
 
@@ -85,5 +85,5 @@ for data in datas:
 
 cax = fig.add_axes([0.93, 0.2, 0.02, 0.6])
 cb = mpl.colorbar.ColorbarBase(cax, cmap=colormap, norm=normalize)
-plt.savefig("Global iron ore freight distribution map without coastlines.png")
+plt.savefig("Global iron ore freight distribution map.png")
 plt.show()
