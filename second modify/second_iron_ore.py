@@ -39,28 +39,28 @@ for data in datas:
         ax.plot([data['Ex_Pos']['lon'], data['Im_Pos']['lon']], [data['Ex_Pos']['lat'], data['Im_Pos']['lat']],
                 color='black', linewidth=normalize(data['trade_num'])+1, alpha=0.5)
         ax.text(float(data['Ex_Pos']['lon']) - 10, float(data['Ex_Pos']['lat']) - 6,
-                "{}".format(data['Export']), fontsize=10)
+                "{}".format("South Africa"), fontsize=10)
     elif 5000 <= data['trade_num'] < 8000:
         ax.plot([data['Ex_Pos']['lon'], data['Im_Pos']['lon']], [data['Ex_Pos']['lat'], data['Im_Pos']['lat']],
                 color='black', linewidth=normalize(data['trade_num'])+1.3, alpha=0.6)
         if data['Import'] == "日本":
             ax.text(float(data['Im_Pos']['lon']), float(data['Im_Pos']['lat']) - 5,
-                    "{}".format(data['Import']), fontsize=12)
+                    "{}".format("Japan"), fontsize=12)
         if data['Import'] == "韩国":
             ax.text(float(data['Im_Pos']['lon']), float(data['Im_Pos']['lat']),
-                    "{}".format(data['Import']), fontsize=11)
+                    "{}".format("Korea"), fontsize=11)
     elif 8000 <= data['trade_num'] < 30000:
         ax.plot([data['Ex_Pos']['lon'], data['Im_Pos']['lon']], [data['Ex_Pos']['lat'], data['Im_Pos']['lat']],
                 color='black', linewidth=normalize(data['trade_num'])+1.4, alpha=0.8)
         ax.text(float(data['Ex_Pos']['lon']) - 10, float(data['Ex_Pos']['lat']) - 6,
-                "{}".format(data['Export']), fontsize=14)
+                "{}".format("Brazil"), fontsize=14)
     else:
         ax.plot([data['Ex_Pos']['lon'], data['Im_Pos']['lon']], [data['Ex_Pos']['lat'], data['Im_Pos']['lat']],
                 color='black', linewidth=normalize(data['trade_num'])+2.5, alpha=normalize(data['trade_num']))
         ax.text(float(data['Ex_Pos']['lon']) - 10, float(data['Ex_Pos']['lat']) - 6,
-                "{}".format(data['Export']), fontsize=16)
+                "{}".format("Australia"), fontsize=16)
         ax.text(float(data['Im_Pos']['lon']) - 10, float(data['Im_Pos']['lat']) + 4,
-                "{}".format(data['Import']), fontsize=20)
+                "{}".format("China"), fontsize=20)
 
 
 
