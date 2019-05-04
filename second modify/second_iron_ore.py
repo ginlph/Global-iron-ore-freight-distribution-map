@@ -12,7 +12,7 @@ plt.rcParams['axes.unicode_minus'] = False  #用来正常显示负号
 with open("../dataProcess/The Trade number.json", encoding='utf8') as f:
     datas = json.load(f)
 
-fig = plt.figure(figsize=(15, 8), dpi=150)
+fig = plt.figure(figsize=(15, 8))
 ax = plt.axes(projection=ccrs.PlateCarree())
 ax.set_extent([-180, 180, -90, 90])
 
@@ -65,5 +65,5 @@ for data in datas:
 
 
 
-plt.savefig('./second iron.png')
+plt.savefig('./second iron.svg')
 plt.show()
